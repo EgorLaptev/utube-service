@@ -1,0 +1,178 @@
+.content {
+    padding: 50px;
+    display: grid;
+    grid-template-columns: 10fr 3fr;
+}
+
+.video__box {
+    width: 100%;
+}
+
+/* Video info */
+.video__info {
+    position: relative;
+    padding: 15px 0;
+    color: #eee;
+}
+
+.video__title {
+    display: inline-block;
+}
+
+.video__description {
+    margin-top: 25px;
+    color: #ccc;
+    font-size: 16rem;
+}
+
+.video__date {
+    color: #888;
+    font-size: 14rem;
+    margin-left: 15px;
+}
+
+.video__options {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+}
+
+.video__options button {
+    color: #eee;
+    font-size: 18rem;
+    background: transparent;
+    border: none;
+    padding: 5px 10px;
+}
+
+.video__options button span {
+    padding: 0 8px;
+    font-size: 18rem;
+    color: #ddd;
+}
+
+/* Author */
+.video__author-info {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.video__author-thumbnail {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.video__author-wrap {
+    margin-left: 15px;
+}
+
+.video__author-username {
+    color: #eee;
+    display: inline-block;
+}
+
+.video__author-link {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: max-content;
+}
+
+.video__author-subscribes {
+    font-size: 12rem;
+    color: #888;
+}
+
+.video__author-subscribe {
+    color: #eee;
+    background: #FF0026;
+    border: none;
+    border-radius: 3px;
+    font-size: 18rem;
+    padding: 10px 25px;
+    margin-left: 25px;
+}
+
+/* Comments */
+.video__comments {
+    margin-top: 100px;
+    width: 100%;
+}
+
+.comments__title {
+    color: #eee;
+
+}
+
+.comments__form {
+    margin-top: 25px;
+    margin-bottom: 50px;
+}
+
+.comments__input {
+    width: 100%;
+    outline: none;
+    padding: 10px;
+    font-size: 16rem;
+    color: #eee;
+    resize: none;
+    border: none;
+    border-bottom: 2px solid #333;
+    background: transparent;
+}
+
+.comments__item {
+    margin: 20px 0;
+}
+
+.comments__author-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: max-content;
+    color: #eee;
+}
+
+.comments__author-thumbnail {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.comments__author-username {
+    margin-left: 10px;
+}
+
+.comments__content {
+    color: #eee;
+    margin-top: 15px;
+    font-size: 16rem;
+    padding-left: 10px;
+}
+
+.comments__date {
+    color: #888;
+    font-size: 13rem;
+    margin-left: 25px;
+}
+
+.comments__actions {
+    margin-top: 10px;
+}
+
+.comments__actions button {
+    background: transparent;
+    font-size: 16rem;
+    border: none;
+    color: #eee;
+    padding: 5px 10px;
+}
+
+.comments__likes-count,
+.comments__dislikes-count {
+    padding-left: 5px;
+}

@@ -1,0 +1,45 @@
+body {
+    background: #111;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.videos {
+    padding: 30px;
+    display: grid;
+    top: 50px;
+    left: 150px;
+    grid-gap: 50px 15px ;
+    grid-template-columns: repeat(4, 1fr);
+    overflow-y: scroll;
+}
+
+.videos__card {
+    width: 100%;
+}
+
+.videos__thumbnail {
+    display: inline-block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.videos__title {
+    display: inline-block;
+    color: #eee;
+    margin-left: 15px;
+    font-size: 18rem;
+}
+
+.videos__user-thumbnail {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.videos__title-wrap {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

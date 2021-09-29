@@ -1,0 +1,77 @@
+body {
+    overflow: hidden;
+}
+
+.videos__list {
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.list__item {
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.videos__item {
+    margin: 15px 0;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    color: #eee;
+    width: 90%;
+}
+
+.card__info {
+    position: relative;
+    padding: 15px 30px;
+}
+
+.card__thumbnail {
+    height: 100%;
+    width: 300px;
+}
+
+.card__link {
+    display: inline;
+}
+
+.card__title {
+    font-size: 18rem;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.card__description {
+    font-size: 16rem;
+    color: #aaa;
+    display: inline-block;
+}
+
+.card__options {
+    position: absolute;
+    bottom: 5px;
+}
+
+.card__delete,
+.card__status {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    color: #eee;
+    background: #333;
+    font-size: 16rem;
+}
+
+.card__delete:hover {
+    background: #FF0026;
+}
+
+.card__status:hover {
+    background: #2979FF;
+}

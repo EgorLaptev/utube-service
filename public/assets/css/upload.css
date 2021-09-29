@@ -1,0 +1,117 @@
+.content {
+    padding: 50px;
+}
+
+.upload-form {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-gap: 25px;
+    color: #ddd;
+    background-image: url("");
+}
+
+.upload-form input,
+.upload-form textarea {
+    resize: vertical;
+    padding: 10px 25px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    color: #ccc;
+    font-size: 18rem;
+    max-height: 50px;
+}
+
+.upload-form__drop {
+    overflow: hidden;
+    position: relative;
+    color: #eee;
+    font-size: 36rem;
+    padding: 100px 150px;
+    background: #333;
+    text-align: center;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-form__file {
+    display: none;
+}
+
+input.upload-form__upload {
+    background: #636794;
+    border-color: #636794;
+    width: 100%;
+}
+
+.upload-form__options {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 15px;
+}
+
+.upload-form__close-comments,
+.upload-form__private-video {
+    padding: 10px 25px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background: transparent;
+    outline: none;
+    color: #888;
+    font-size: 18rem;
+    max-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.upload-form__close-comments_active,
+.upload-form__private-video_active {
+    color: #eeeeee;
+    background: #F58E3F;
+    border-color: #F58E3F;
+}
+
+.closedComments,
+.privateVideo {
+    display: none;
+}
+
+.upload-form__preview-drop {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 24rem;
+    background: #333;
+    border-radius: 5px;
+
+}
+
+.upload-form__preview {
+    display: none;
+}
+
+#previewVideo {
+    position: absolute;
+    width: 101%;
+    height: auto;
+    display: none;
+}
+
+#picturePreview {
+    background: #333;
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
