@@ -23,6 +23,11 @@ class User extends Authenticatable
         'password',
     ];
 
+    protected $attributes = [
+        'avatar' => 'avatars/placeholder.png',
+        'header' => 'headers/placeholder.png'
+    ];
+
     /**
      * The attributes that should be hidden for serialization.
      *
@@ -31,5 +36,15 @@ class User extends Authenticatable
     protected $hidden = [
         'password',
     ];
+
+    public function videos()
+    {
+        return $this->hasMany(Video::class, 'author_id', 'id');
+    }
+
+    public function subscribers()
+    {
+        return $this->hasMany(Subscribe::class, 'channel_id', 'id');
+    }
 
 }

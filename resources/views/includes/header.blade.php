@@ -8,12 +8,15 @@
         </a>
     </div>
 
-    <input type="search" id="searchForm" class="header__search-form" placeholder="Search">
+    <form action="{{ route('home') }}" method="GET" class="header__search-form">
+        <input type="search" name="search" id="searchForm" class="header__search-input" placeholder="Search">
+    </form>
 
     <ul class="header__menu menu">
         <li class="menu__item">
             <button id="toggleUserMenu">
-                <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="header__user-icon">
+                @guest() <img src="{{ url('storage/app/avatars/placeholder.png') }}" alt="" class="header__user-icon"> @endguest
+                @auth() <img src="{{ asset('storage/app') . '/' . \Illuminate\Support\Facades\Auth::user()->avatar }}" alt="" class="header__user-icon"> @endauth
             </button>
         </li>
         @include('includes.user-menu')

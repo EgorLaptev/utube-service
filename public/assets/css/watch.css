@@ -1,7 +1,16 @@
 .content {
     padding: 50px;
     display: grid;
+    grid-gap: 25px;
     grid-template-columns: 10fr 3fr;
+}
+
+.video {
+    width: 100%;
+}
+
+.recommendations {
+    width: 100%;
 }
 
 .video__box {
@@ -64,6 +73,7 @@
     border-radius: 50%;
     height: 50px;
     width: 50px;
+    object-fit: cover;
 }
 
 .video__author-wrap {
@@ -94,7 +104,7 @@
     border-radius: 3px;
     font-size: 18rem;
     padding: 10px 25px;
-    margin-left: 25px;
+    margin-left: 5px;
 }
 
 /* Comments */
@@ -141,6 +151,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .comments__author-username {
@@ -175,4 +186,62 @@
 .comments__likes-count,
 .comments__dislikes-count {
     padding-left: 5px;
+}
+
+.comments__send,
+.comments__clear {
+    margin-top: 15px;
+    float: right;
+    color: #eee;
+    font-size: 18rem;
+    padding: 8px 40px;
+    border-radius: 3px;
+    border: none;
+    background: var(--grey-blue);
+}
+
+.comments__clear {
+    margin-right: 5px;
+    color: #555;
+    background: #252525;
+}
+
+.comments__send:hover {
+    background: var(--blue);
+}
+
+/* Recommendations */
+.recommendations {;
+
+}
+
+.recommendations__card {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+
+.recommendations__preview {
+    width: 100%;
+}
+
+.recommendations__title {
+    margin-top: 5px;
+    color: #eee;
+    font-size: 18rem;
+    font-weight: normal;
+}
+
+.subscribed {
+    background: grey;
+}
+
+.video__download {
+    color: var(--green);
+    border: 1px solid var(--green);
+    background: transparent;
+    border-radius: 3px;
+    font-size: 18rem;
+    padding: 10px 25px;
+    margin-left: 25px;
 }

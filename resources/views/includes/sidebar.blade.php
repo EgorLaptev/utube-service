@@ -16,6 +16,12 @@
         <li class="menu__item">
             <a href="{{ route('likes') }}" class="menu__link"><i class="fas fa-heart"></i>Likes</a>
         </li>
+        <li class="menu__item">
+            <a href="{{ route('user') }}" class="menu__link"><i class="fas fa-user-circle"></i>Channel</a>
+        </li>
+        <li class="menu__item">
+            <a href="{{ route('subscribes') }}" class="menu__link"><i class="far fa-compass"></i>Subscribes</a>
+        </li>
     </ul>
 
 </aside>

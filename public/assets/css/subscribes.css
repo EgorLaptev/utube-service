@@ -1,0 +1,87 @@
+.content {
+    padding-top: 100px;
+}
+
+.background-text {
+    text-align: center;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 120rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #151515;
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.subscribes__list {
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: scroll;
+}
+
+.list__item {
+    width: 100%;
+    margin: 15px 0;
+    padding: 10px;
+}
+
+.subscribes__item {
+    width: 100%;
+    margin: 15px 0;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: flex-start;
+    color: #eee;
+    position: relative;
+}
+
+.card__info {
+    width: 100% ;
+    padding: 15px 30px;
+    background: #151515;
+    border-radius: 0 5px 5px 0;
+}
+
+.card__thumbnail {
+    height: 100%;
+    width: 300px;
+    background: #252525;
+    border-radius: 3px;
+    object-fit: cover;
+}
+
+.card__link {
+    display: inline;
+}
+
+.card__title {
+    font-size: 18rem;
+    display: inline-block;
+    margin-bottom: 25px;
+}
+
+.card__description {
+    font-size: 16rem;
+    color: #aaa;
+    display: inline-block;
+}
+
+.card__remove {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 18rem;
+    color: #333;
+    background: transparent;
+    border: none;
+}

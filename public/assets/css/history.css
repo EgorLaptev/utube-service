@@ -1,5 +1,20 @@
-body {
-    overflow: hidden;
+.content {
+    padding-top: 125px;
+}
+
+.background-text {
+    text-align: center;
+    position: absolute;
+    top: 75px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 120rem;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: #151515;
+    user-select: none;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .history__list {
@@ -12,13 +27,13 @@ body {
 }
 
 .list__item {
-    margin: 15px 0;
     padding: 10px;
+    width: 100%;
 }
 
 .history__item {
-    margin: 15px 0;
     height: 200px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     align-items: stretch;
@@ -29,12 +44,16 @@ body {
 }
 
 .card__info {
+    width: 100%;
     padding: 15px 30px;
+    background: #151515;
 }
 
 .card__thumbnail {
     height: 100%;
     width: 300px;
+    background: #252525;
+    border-radius: 3px;
 }
 
 .card__link {
@@ -55,10 +74,13 @@ body {
 
 .card__remove {
     position: absolute;
-    right: 10px;
-    top: 10px;
+    right: -10px;
+    top: 0;
     font-size: 18rem;
     color: #333;
-    background: transparent;
     border: none;
+    height: 100%;
+    background: #171717;
+    padding: 0 10px;
+    border-radius: 0 5px 5px 0;
 }

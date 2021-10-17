@@ -35,6 +35,8 @@ body {
 .card__thumbnail {
     height: 100%;
     width: 300px;
+    background: #252525;
+    border-radius: 3px;
 }
 
 .card__link {
@@ -56,6 +58,7 @@ body {
 .card__options {
     position: absolute;
     bottom: 5px;
+    width: max-content;
 }
 
 .card__delete,
@@ -66,12 +69,13 @@ body {
     color: #eee;
     background: #333;
     font-size: 16rem;
+    display: inline;
 }
 
 .card__delete:hover {
-    background: #FF0026;
+    background: var(--orange);
 }
 
 .card__status:hover {
-    background: #2979FF;
+    background: var(--grey-blue);
 }

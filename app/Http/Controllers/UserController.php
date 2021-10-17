@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Subscribe;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -63,6 +64,46 @@ class UserController extends Controller
     {
         Auth::logout();
         return redirect(route('home'));
+    }
+
+    public function updateHeader(Request $request)
+    {
+        $header_path = $request->file('header')->store('headers');
+        return User::where('id', Auth::id())->update(['header' => $header_path]);
+    }
+
+    public function updateAvatar(Request $request)
+    {
+        $avatar_path = $request->file('avatar')->store('avatars');
+        return User::where('id', Auth::id())->update(['avatar' => $avatar_path]);
+    }
+
+    public function subscribe(Request $request)
+    {
+
+        if (Subscribe::where([
+            ['user_id', Auth::id()],
+            ['channel_id', $request->get('id')]
+        ])->exists()) {
+
+            Subscribe::where([
+                ['user_id', Auth::id()],
+                ['channel_id', $request->get('id')]
+            ])->delete();
+
+            return 0;
+
+        } else {
+
+            Subscribe::create([
+                'user_id' => Auth::id(),
+                'channel_id' => $request->get('id')
+            ]);
+
+            return 1;
+
+        }
+
     }
 
 }

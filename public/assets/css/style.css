@@ -1,5 +1,10 @@
 :root {
-    font-size: 1px;
+    font-size: 1.05px;
+    --red: #FF0026;
+    --blue: #2979FF;
+    --grey-blue: #636794;
+    --orange: #F58E3F;
+    --green: #00C500;
 }
 
 * {
@@ -16,6 +21,7 @@ body {
     grid-template-rows: 50px 1fr;
     height: 100vh;
     background: #111;
+    overflow-x: hidden;
 }
 
 
@@ -49,19 +55,23 @@ a {
     background-color: #222;
 }
 
-.header__search-form {
+.header__search-input {
     padding: 7px 20px;
     border-radius: 3px;
     border: none;
     outline: none;
-    width: 30%;
+    width: 100%;
     color: #aaa;
     font-size: 18rem;
     background: #292929;
 }
 
-.header__search-form::placeholder {
+.header__search-input::placeholder {
     color: #444;
+}
+
+.header__search-form {
+    width: 30%;
 }
 
 .header__logo-image {
@@ -74,6 +84,7 @@ a {
     border-radius: 50%;
     height: 45px;
     width: 45px;
+    object-fit: cover;
 }
 
 /* sidebar */
@@ -172,4 +183,10 @@ a {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+
+@media screen and (max-width: 1000px){
+    :root {
+        font-size: 1px;
+    }
 }

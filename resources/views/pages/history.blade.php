@@ -6,99 +6,29 @@
 
 @section('content')
 
-    <ul class="history__list list">
-        <li class="list__item">
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-            <article class="history__item card">
-                <a href="{{ route('watch') }}" class="card__link">
-                    <img src="{{ url('public/assets/img/placeholder.png') }}" alt="" class="card__thumbnail">
-                </a>
-                <div class="card__info">
-                    <h3 class="card__title">Test video title</h3>
-                    <p class="card__description">But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was born and I will give you a complete account of the system, and expound the actual teachings of the great explorer of the truth, the master-builder of human happiness.</>
-                </div>
-                <button class="card__remove"><i class="fas fa-times"></i></button>
-            </article>
-        </li>
-    </ul>
+    <main class="content">
+
+        <span class="background-text">History</span>
+
+        <ul class="history__list list">
+
+            @foreach($videos as $video)
+            <li class="list__item">
+                <article class="history__item card">
+                    <a href="{{ route('watch', ['v' => $video['code']]) }}" class="card__link">
+                        <img src="{{ asset('storage/app') . '/' . $video['preview_path'] }}" alt="" class="card__thumbnail">
+                    </a>
+                    <div class="card__info">
+                        <h3 class="card__title">{{ $video['title'] }}</h3>
+                        <p class="card__description">{{ $video['description'] }}</p>
+                    </div>
+                    <button class="card__remove"><i class="fas fa-times"></i></button>
+                </article>
+            </li>
+            @endforeach
+
+        </ul>
+
+    </main>
 
 @endsection

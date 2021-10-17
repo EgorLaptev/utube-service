@@ -19,7 +19,11 @@
             <input class="sign-in__input" type="password" name="password" placeholder="Password">
             <input class="sign-in__submit" type="submit" value="Sign in">
 
-            <div id="sign-in__errors"></div>
+            <div id="sign-in__errors">
+                @if($errors->any())
+                    {{ $errors->all()[0]  }}
+                @endif
+            </div>
 
         </form>
 

@@ -7,7 +7,6 @@
     grid-template-columns: 2fr 1fr;
     grid-gap: 25px;
     color: #ddd;
-    background-image: url("");
 }
 
 .upload-form input,
@@ -74,8 +73,8 @@ input.upload-form__upload {
 .upload-form__close-comments_active,
 .upload-form__private-video_active {
     color: #eeeeee;
-    background: #F58E3F;
-    border-color: #F58E3F;
+    background: var(--orange);
+    border-color: var(--orange);
 }
 
 .closedComments,
@@ -114,4 +113,8 @@ input.upload-form__upload {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+#upload__errors {
+
 }
